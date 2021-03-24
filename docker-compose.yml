@@ -1,0 +1,73 @@
+version: "3.3"
+
+services:
+  web:
+    build:
+      args:
+        user: ${USER}
+        uid: ${UID}
+        gid: ${GID}
+      context: ./
+      dockerfile: ./docker/nginx/Dockerfile
+    container_name: sic-web-nginx
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    networks:
+      - sic-network
+
+  app:
+    build:
+      args:
+        user: ${USER}
+        uid: ${UID}
+        gid: ${GID}
+      context: ./
+      dockerfile: ./docker/app/Dockerfile
+    image: sic-web-app
+    container_name: sic-web-app
+    restart: unless-stopped
+    working_dir: /var/www/app
+    depends_on:
+      - mariadb
+    links:
+      - mariadb
+    env_file:
+      - .env
+    networks:
+      - sic-network
+
+  phpmyadmin:
+    build:
+      context: ./docker/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=drupal
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "8085:80"
+    depends_on:
+      - mariadb
+    networks:
+      - sic-network
+
+  #mysql Service
+  mariadb:
+    container_name: sic-web-db
+    image: mariadb:latest
+    ports:
+      - "3307:3306"
+    volumes:
+      - "./mariadb/sql:/sql"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: drupal
+      MYSQL_DATABASE: database
+    networks:
+      - sic-network
+
+networks:
+  sic-network:
+    driver: bridge

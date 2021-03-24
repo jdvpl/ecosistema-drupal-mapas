@@ -1,0 +1,44 @@
+# Build a Docker image
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+  - main
+
+resources:
+  - repo: self
+
+variables:
+  tag: '$(Build.SourceBranchName).$(Build.BuildNumber)'
+  dockerRegistryServiceConnection: 'd87eaf23-f00c-4320-9119-00c5f00ff07d'
+  imageRepository: 'sic-web'
+  imageNginxRepository: 'sic-web-nginx'
+  containerRegistry: 'crmintic.azurecr.io'
+
+stages:
+  - stage: Build
+    displayName: Build images for app and nginx
+    jobs:
+      - job: Build
+        displayName: Build
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - task: Docker@2
+            displayName: Build an image App
+            inputs:
+              containerRegistry:  $(dockerRegistryServiceConnection)
+              repository: $(imageRepository)
+              command: 'buildAndPush'
+              Dockerfile: $(Build.SourcesDirectory)/docker/app/Dockerfile
+              buildContext: '.'
+              tags: '$(tag)'
+          - task: Docker@2
+            displayName: Build an image Nginx
+            inputs:
+              containerRegistry:  $(dockerRegistryServiceConnection)
+              repository: $(imageNginxRepository)
+              command: 'buildAndPush'
+              dockerfile: $(Build.SourcesDirectory)/docker/nginx/Dockerfile
+              buildContext: '.'
+              tags: '$(tag)'
+
