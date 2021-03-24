@@ -1,20 +1,24 @@
 # ecosistema-drupal-mapas
 detener el servidor de apache
-    sudo /etc/init.d/apache2 stop
-Iniciar contenedor 
-    fin system start
+sudo /etc/init.d/apache2 stop
+
+Iniciar contenedor
+fin system start
+
 Iniciar hostname con ese contenedor 
-    fin p start
+fin p start
+
 remover otro contenedor se ponen en la carpeta principa;
-    fin project remove 
+fin project remove 
+
 cd docroot Instalar 
-composer require 'drupal/admin_toolbar:^3.0'
+composer require drupal/admin_toolbar
 
 Instalar Bootstrap 
-composer require 'drupal/bootstrap:^3.23'
+composer require drupal/bootstrap
 
 Instalar Webform 
-composer require 'drupal/webform:^6.0'
+composer require drupal/webform:^6.0
 
 Instalar Taxonomy Manager 
 composer require drupal/taxonomy_manager 
