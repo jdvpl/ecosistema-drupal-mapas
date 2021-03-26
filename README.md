@@ -1,6 +1,5 @@
 # ecosistema-drupal-mapas
 detener el servidor de apache
-
 sudo /etc/init.d/apache2 stop
 
 Borrar el archivo composer.lock en docroot
@@ -30,7 +29,7 @@ Log into your site with drush. Access the site and do necessary work at http://l
 $ fin drush uli
 
 Se ha instalado:
-Admin-toolbar,Ludwig,Bootstrap, Webform, Taxonomy Manager, Csv importador, Taxonomy Place,Coutry_state_city, Geofield, LeftLet
+Admin-toolbar,Ludwig,Bootstrap, Webform, Taxonomy Manager, Csv importador, Taxonomy Place,Coutry_state_city, Geofield, LeftLet, prfile
 
 despues de hacer cambios en la plataforma puedes seguir este tutorial para mas informacion https://www.solucionex.com/blog/como-trabajar-en-grupo-con-drupal-8-git-composer-config-split-de-forma-correcta
 
@@ -44,6 +43,28 @@ fin drush cex -y
 git add config/sync
 
 git commit -m "uploading needed packages"
+
+git push orgin nombre_rama --- es en la que esta
+
+
+git pull 
+
+Para trar los cambios que han hecho en el repositorio
+
+Borrar Cache 
+
+sudo systemd-resolve --flush-caches
+
+
+en la carpeta Docroot
+
+fin drush cim -y
+
+si sale error ir a la ruta docroot/core/lib/Drupal/Core/Config/ConfigImporter.php y comentar la linea 755
+
+
+
+
 
 git push orgin nombre_rama --- es en la que esta
 
