@@ -1,5 +1,5 @@
-uuid: 627f772e-6c88-4dd5-8ab3-019ee98982ac
-langcode: en
+uuid: d8120f4c-9342-4353-9959-3f1c7cca9d3b
+langcode: es
 status: true
 dependencies:
   module:
@@ -7,9 +7,9 @@ dependencies:
 _core:
   default_config_hash: nCa1oy25w2fh-nk_iQ7IJFQwQIcKxrV_5EQW2y8dzPc
 id: who_s_new
-label: 'Who''s new'
+label: 'Quién es nuevo'
 module: user
-description: 'Shows a list of the newest user accounts on the site.'
+description: 'Muestra una lista de las cuentas de usuario más recientes del sitio.'
 tag: default
 base_table: users_field_data
 base_field: uid
@@ -163,7 +163,7 @@ display:
           plugin_id: date
           entity_type: user
           entity_field: created
-      title: 'Who''s new'
+      title: 'Quién es nuevo'
       header: {  }
       footer: {  }
       empty: {  }
@@ -180,12 +180,12 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: 'Who''s new'
+    display_title: 'Quién es nuevo'
     position: 1
     display_options:
-      display_description: 'A list of new users'
-      block_description: 'Who''s new'
-      block_category: User
+      display_description: 'Un listado de nuevos usuarios'
+      block_description: 'Quién es nuevo'
+      block_category: Usuario
       display_extenders: {  }
     cache_metadata:
       contexts:

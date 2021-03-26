@@ -1,5 +1,5 @@
-uuid: 9408a964-1d8f-4a54-9a04-b4569c3ce9f7
-langcode: en
+uuid: c96e5583-72af-48ff-b82d-57c38701cdf2
+langcode: es
 status: true
 dependencies:
   config:
@@ -11,9 +11,9 @@ dependencies:
 _core:
   default_config_hash: Xk6puCoRlHSJG8mU9Zg2iN4fbnzaw2dFolwMfpWxDSE
 id: frontpage
-label: Frontpage
+label: 'Página inicio'
 module: node
-description: 'All content promoted to the front page.'
+description: 'Todo el contenido promovido a la página principal.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -30,7 +30,7 @@ display:
       empty:
         area_text_custom:
           admin_label: ''
-          content: 'No front page content has been created yet.<br/>Follow the <a target="_blank" href="https://www.drupal.org/docs/user_guide/en/index.html">User Guide</a> to start building your site.'
+          content: 'Aún no se ha creado ningún contenido de página de inicio. <br>Siga la<a target="_blank" href="https://www.drupal.org/es/docs/user_guide/es/index.html">Guía del usuario</a> para comenzar a construir su sitio.'
           empty: true
           field: area_text_custom
           group_type: group
@@ -60,7 +60,7 @@ display:
           admin_label: ''
           label: ''
           empty: true
-          title: 'Welcome to [site:name]'
+          title: 'Bienvenido a [site:name]'
           plugin_id: title
       exposed_form:
         type: basic
@@ -184,8 +184,8 @@ display:
             offset: false
             offset_label: Offset
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
+            previous: '‹ Anterior'
+            next: 'Siguiente >'
             first: '« First'
             last: 'Last »'
           quantity: 9
@@ -260,13 +260,12 @@ display:
   feed_1:
     display_plugin: feed
     id: feed_1
-    display_title: Feed
+    display_title: 'Canal de noticias'
     position: 2
     display_options:
       sitename_title: true
       path: rss.xml
       displays:
-        page_1: page_1
         default: ''
       pager:
         type: some
@@ -288,22 +287,6 @@ display:
     cache_metadata:
       contexts:
         - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      max-age: -1
-      tags: {  }
-  page_1:
-    display_options:
-      path: node
-      display_extenders: {  }
-    display_plugin: page
-    display_title: Page
-    id: page_1
-    position: 1
-    cache_metadata:
-      contexts:
-        - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       max-age: -1

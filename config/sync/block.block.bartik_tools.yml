@@ -1,4 +1,4 @@
-uuid: 3840f114-b457-4bab-aad7-d65ba0484147
+uuid: 6352fa8c-8978-48e4-ba8e-1ba268abf8b2
 langcode: es
 status: true
 dependencies:
@@ -18,7 +18,7 @@ provider: null
 plugin: 'system_menu_block:tools'
 settings:
   id: 'system_menu_block:tools'
-  label: Herramientas
+  label: Tools
   provider: system
   label_display: visible
   level: 1

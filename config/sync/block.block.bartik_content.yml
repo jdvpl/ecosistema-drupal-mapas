@@ -1,4 +1,4 @@
-uuid: 77865342-5a56-4adb-8f82-b092225f1115
+uuid: aed6e799-9a70-4d1e-ba4d-0bfd63904791
 langcode: es
 status: true
 dependencies:
@@ -16,7 +16,7 @@ provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'Contenido principal de la página'
+  label: 'Main page content'
   provider: system
   label_display: '0'
 visibility: {  }

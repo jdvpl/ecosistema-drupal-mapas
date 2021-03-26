@@ -1,4 +1,4 @@
-uuid: 5726c988-ac8e-45e9-a860-5cc7df21b55a
+uuid: fe11c7d4-7a91-44f7-a565-599aa4762ffe
 langcode: es
 status: true
 dependencies: {  }
@@ -7,8 +7,8 @@ _core:
 id: feedback
 label: 'Comentarios sobre el sitio web'
 recipients:
-  - estebanpalocastro@gmail.com
+  - juanda554242@gmail.com
 reply: ''
 weight: 0
-message: 'Su mensaje ha sido enviado.'
+message: 'Your message has been sent.'
 redirect: ''

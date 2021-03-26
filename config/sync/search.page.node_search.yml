@@ -1,5 +1,5 @@
-uuid: 137f4521-486f-4d47-8733-fae2d7a074c0
-langcode: en
+uuid: 76c761b9-002e-4fe3-9aa1-75e5a19a7f4b
+langcode: es
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: 97tvtzGOa8_flb22CzSjgtm_YkiGMHvEBO-6q2K9V_U
 id: node_search
-label: Content
+label: Contenido
 path: node
 weight: -10
 plugin: node_search

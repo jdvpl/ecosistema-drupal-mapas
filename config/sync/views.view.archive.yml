@@ -1,5 +1,5 @@
-uuid: fac4621d-ddc9-4ae4-84ad-85298069847a
-langcode: en
+uuid: 49dccfbf-8cdc-42e5-96b4-6e681bfa0caf
+langcode: es
 status: false
 dependencies:
   config:
@@ -10,9 +10,9 @@ dependencies:
 _core:
   default_config_hash: gA3tLETtsrObWW1Uvb6Mh-fg0Qu_6uCEzgL9jKQgPgo
 id: archive
-label: Archive
+label: Archivo
 module: node
-description: 'All content, by month.'
+description: 'Todo el contenido, por mes.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -31,7 +31,7 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      title: 'Monthly archive'
+      title: 'Archivo mensual'
       access:
         type: perm
         options:
@@ -187,7 +187,7 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: Block
+    display_title: Bloque
     display_plugin: block
     position: 1
     display_options:
@@ -226,7 +226,7 @@ display:
       tags: {  }
   page_1:
     id: page_1
-    display_title: Page
+    display_title: Página
     display_plugin: page
     position: 2
     display_options:

@@ -1,0 +1,11 @@
+uuid: 1ca7ba05-01be-4bb5-8af5-bcff45274ac2
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.departamentos
+id: taxonomy_term.departamentos
+target_entity_type_id: taxonomy_term
+target_bundle: departamentos
+default_langcode: site_default
+language_alterable: false
