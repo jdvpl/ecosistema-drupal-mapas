@@ -1,0 +1,32 @@
+uuid: 2cf3997f-a2fa-4f3c-ae9c-a5408fca2558
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.inicio.field_ecosistema
+    - node.type.inicio
+  module:
+    - image
+    - user
+id: node.inicio.full
+targetEntityType: node
+bundle: inicio
+mode: full
+content:
+  field_ecosistema:
+    weight: 101
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
