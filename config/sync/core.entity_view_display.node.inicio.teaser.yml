@@ -1,0 +1,23 @@
+uuid: a933fa48-c18f-4a01-a236-d9f69c100ea5
+langcode: es
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.inicio.field_ecosistema
+    - node.type.inicio
+  module:
+    - user
+id: node.inicio.teaser
+targetEntityType: node
+bundle: inicio
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_ecosistema: true
+  langcode: true
