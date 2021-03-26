@@ -67,9 +67,6 @@ si sale error ir a la ruta docroot/core/lib/Drupal/Core/Config/ConfigImporter.ph
 
 
 
-git push orgin nombre_rama --- es en la que esta
-
-
 
 
 
