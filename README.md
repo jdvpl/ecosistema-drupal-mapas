@@ -2,38 +2,31 @@
 detener el servidor de apache
 sudo /etc/init.d/apache2 stop
 
+Borrar el archivo composer.lock en docroot
+
 Iniciar contenedor
 fin system start
 
-Iniciar hostname con ese contenedor 
-fin p start
+En la carpeta docroot
 
-remover otro contenedor se ponen en la carpeta principa;
-fin project remove 
+$ fin composer update
+$ fin composer install
 
-cd docroot Instalar 
-composer require drupal/admin_toolbar
+$ fin p start
+$ fin hosts add
 
-Instalar Bootstrap 
-composer require drupal/bootstrap
+Agregar la clave ssh https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04-es 
+$ fin ssh-key add ${id_rsa}
 
-Instalar Webform 
-composer require drupal/webform:^6.0
+Install basic site using this command.
 
-Instalar Taxonomy Manager 
-composer require drupal/taxonomy_manager 
+$ fin drush si -Borrar tablas y restablece la base de datos
+Log into your site with drush. Access the site and do necessary work at http://local.mintic-mapas.com/ mas lo que se genera con el sigueinte comando desde/user
 
-Instalar Csv importador 
-composer require drupal/csv_importer
+$ fin drush uli
 
-Instalar Taxonomy Place 
-composer require drupal/taxonomy_place
+Se ha instalado:
+Admin-toolbar,Ludwig,Bootstrap, Webform, Taxonomy Manager, Csv importador, Taxonomy Place,Coutry_state_city, Geofield, LeftLet
 
-Instalar Coutry_state_city 
-composer require drupal/country_state_city
+despues de hacer cambios en la plataforma puedes seguir este tutorial para mas informacion https://www.solucionex.com/blog/como-trabajar-en-grupo-con-drupal-8-git-composer-config-split-de-forma-correcta
 
-Instalar Geofield 
-composer require drupal/geofield
-
-Instalar LeftLet 
-composer require drupal/leaflet
