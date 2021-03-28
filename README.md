@@ -1,10 +1,12 @@
 # ecosistema-drupal-mapas
 
-
 #detener el servidor de apache
   sudo /etc/init.d/apache2 stop
 
 *Borrar el archivo composer.lock en docroot
+
+
+
 
 #Iniciar contenedor
     ```
@@ -15,14 +17,21 @@ En la carpeta docroot
     ```
  $ fin composer update
      ```
+ Luego
+     ```
  $ fin composer install
     ```
     
-    ```    
- $ fin p start
+2. Setup VM.
+Before setting up the VM on your local, you'll need to install Docksal on your machine. Visit [Docksal Installation Page](https://docksal.io/installation) for more info. Also, consider visiting [The Official Documentation Site](https://docs.docksal.io/).
+    ```
+    $ fin vm start (only if you're using VirtualBox)
     ```
     ```
- $ fin hosts add
+    $ fin p start
+    ```
+    ```
+    $ fin hosts add
     ```
     
 Agregar la clave ssh https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04-es 
