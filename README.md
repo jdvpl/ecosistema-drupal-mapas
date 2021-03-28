@@ -41,14 +41,12 @@ Install basic site using this command.
 
 Importar Base de datos descomprimir archivo y cambiar el nombre a "mapas.sql"
 Desde la carpeta raiz:
-
     ```
     $ fin db import dumps/mapas.sql
     ```
     
  $ fin drush si -Borrar tablas y restablece la base de datos
 Log into your site with drush. Access the site and do necessary work at http://local.mintic-mapas.com/ mas lo que se genera con el sigueinte comando desde/user
-
     ```
  $ fin drush uli
     ```
