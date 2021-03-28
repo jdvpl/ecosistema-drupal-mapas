@@ -1,0 +1,29 @@
+uuid: c585f7c2-559f-42ce-b902-304ef9df1a35
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.teste.body
+    - node.type.teste
+  module:
+    - text
+    - user
+id: node.teste.default
+targetEntityType: node
+bundle: teste
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
