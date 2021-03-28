@@ -1,0 +1,23 @@
+uuid: 797d603f-c8ae-4a3a-8e65-2911f494ac73
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_estadoinstalacion
+    - node.type.institucion_educativa
+id: node.institucion_educativa.field_estadoinstalacion
+field_name: field_estadoinstalacion
+entity_type: node
+bundle: institucion_educativa
+label: Estado_Instalacion
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Finalizado
+  off_label: Pendiente
+field_type: boolean

@@ -1,0 +1,37 @@
+uuid: fc7f2209-0fee-44e5-b3e3-605bfc2e0f4f
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.institucion_educativa.body
+    - field.field.node.institucion_educativa.field_estadoinstalacion
+    - field.field.node.institucion_educativa.field_formacion_instalacion
+    - field.field.node.institucion_educativa.field_localizacion
+    - node.type.institucion_educativa
+  module:
+    - text
+    - user
+id: node.institucion_educativa.teaser
+targetEntityType: node
+bundle: institucion_educativa
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_estadoinstalacion: true
+  field_formacion_instalacion: true
+  field_localizacion: true
+  langcode: true

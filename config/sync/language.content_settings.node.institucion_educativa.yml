@@ -1,0 +1,11 @@
+uuid: 7b9388bb-9e60-43ff-9daf-b0ed2b15b2fe
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.institucion_educativa
+id: node.institucion_educativa
+target_entity_type_id: node
+target_bundle: institucion_educativa
+default_langcode: site_default
+language_alterable: false
