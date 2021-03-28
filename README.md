@@ -1,13 +1,14 @@
 # ecosistema-drupal-mapas
 
 
-# detener el servidor de apache
+#detener el servidor de apache
   sudo /etc/init.d/apache2 stop
 
-Borrar el archivo composer.lock en docroot
+*Borrar el archivo composer.lock en docroot
 
-# Iniciar contenedor
+#Iniciar contenedor
   fin system start
+
 
 En la carpeta docroot
 
@@ -22,7 +23,9 @@ $ fin ssh-key add ${id_rsa}
 
 Install basic site using this command.
 
-Importar Base de datos descomprimir archivo
+Importar Base de datos descomprimir archivo y cambiar el nombre a "mapas.sql"
+Desde la carpeta raiz:
+
 fin db import dumps/mapas.sql
 
 $ fin drush si -Borrar tablas y restablece la base de datos
