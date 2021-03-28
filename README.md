@@ -7,16 +7,16 @@
 *Borrar el archivo composer.lock en docroot
 
 #Iniciar contenedor
-  fin system start
+ $ fin system start
 
 
 En la carpeta docroot
 
-fin composer update
-fin composer install
+ $ fin composer update
+ $ fin composer install
 
-fin p start
-fin hosts add
+ $ fin p start
+ $ fin hosts add
 
 Agregar la clave ssh https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04-es 
 $ fin ssh-key add ${id_rsa}
@@ -26,12 +26,12 @@ Install basic site using this command.
 Importar Base de datos descomprimir archivo y cambiar el nombre a "mapas.sql"
 Desde la carpeta raiz:
 
-fin db import dumps/mapas.sql
+ $ fin db import dumps/mapas.sql
 
-$ fin drush si -Borrar tablas y restablece la base de datos
+ $ fin drush si -Borrar tablas y restablece la base de datos
 Log into your site with drush. Access the site and do necessary work at http://local.mintic-mapas.com/ mas lo que se genera con el sigueinte comando desde/user
 
-$ fin drush uli
+ $ fin drush uli
 
 Se ha instalado:
 Admin-toolbar,Ludwig,Bootstrap, Webform, Taxonomy Manager, Csv importador, Taxonomy Place,Coutry_state_city, Geofield, LeftLet, prfile
@@ -43,27 +43,27 @@ para hacer cambios crear rama git checkout -b nombre_rama
 
 en la carpeta docroot corres exporantando los cambios del .yaml
 
-fin drush cex -y
+ $ fin drush cex -y
 
-git add config/sync
+ $ git add config/sync
 
-git commit -m "uploading needed packages"
+ $ git commit -m "uploading needed packages"
 
-git push orgin nombre_rama --- es en la que esta
+ $ git push orgin nombre_rama --- es en la que esta
 
 
-git pull 
+ $ git pull 
 
 Para trar los cambios que han hecho en el repositorio
 
 Borrar Cache 
 
-sudo systemd-resolve --flush-caches
+ $ sudo systemd-resolve --flush-caches
 
 
 en la carpeta Docroot
 
-fin drush cim -y
+ $ fin drush cim -y
 
 si sale error ir a la ruta docroot/core/lib/Drupal/Core/Config/ConfigImporter.php y comentar la linea 755
 
