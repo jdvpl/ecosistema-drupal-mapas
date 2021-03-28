@@ -1,0 +1,23 @@
+uuid: 8842c06c-8bcc-4e3f-8deb-27a9bec2d14c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.institucion_educativa
+  module:
+    - text
+id: node.institucion_educativa.body
+field_name: body
+entity_type: node
+bundle: institucion_educativa
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

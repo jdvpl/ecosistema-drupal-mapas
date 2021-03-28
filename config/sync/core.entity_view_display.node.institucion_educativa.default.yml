@@ -1,0 +1,62 @@
+uuid: b7aad18c-9dd0-43bf-aaf0-8d653374719f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.institucion_educativa.body
+    - field.field.node.institucion_educativa.field_estadoinstalacion
+    - field.field.node.institucion_educativa.field_formacion_instalacion
+    - field.field.node.institucion_educativa.field_localizacion
+    - node.type.institucion_educativa
+  module:
+    - geofield
+    - text
+    - user
+id: node.institucion_educativa.default
+targetEntityType: node
+bundle: institucion_educativa
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_estadoinstalacion:
+    weight: 103
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_formacion_instalacion:
+    weight: 104
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_localizacion:
+    weight: 102
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    type: geofield_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

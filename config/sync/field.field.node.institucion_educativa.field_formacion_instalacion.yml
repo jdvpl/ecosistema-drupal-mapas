@@ -1,0 +1,23 @@
+uuid: 2f3952ee-9725-453b-858a-fcc3666c7432
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_formacion_instalacion
+    - node.type.institucion_educativa
+id: node.institucion_educativa.field_formacion_instalacion
+field_name: field_formacion_instalacion
+entity_type: node
+bundle: institucion_educativa
+label: Formacion_Realizada
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Sí
+  off_label: 'No'
+field_type: boolean
