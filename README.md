@@ -7,17 +7,21 @@
 *Borrar el archivo composer.lock en docroot
 
 #Iniciar contenedor
+    ```
  $ fin system start
-
+    ```
 
 En la carpeta docroot
-
+    ```
  $ fin composer update
  $ fin composer install
-
+    ```
+    
+    ```    
  $ fin p start
  $ fin hosts add
-
+    ```
+    
 Agregar la clave ssh https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04-es 
 $ fin ssh-key add ${id_rsa}
 
