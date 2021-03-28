@@ -79,8 +79,8 @@ display:
               rendered_strip: false
           data_source: field_localizacion
           entity_source: __base_table
-          name_field: ''
-          description_field: ''
+          name_field: title
+          description_field: title
           view_mode: full
           leaflet_map: 'OSM Mapnik'
           height: '400'
@@ -338,6 +338,86 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        field_formacion_instalacion_value:
+          id: field_formacion_instalacion_value
+          table: node__field_formacion_instalacion
+          field: field_formacion_instalacion_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: All
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: Formacion_Realizada
+            description: 'Buscar por la formación realizada'
+            use_operator: true
+            operator: field_formacion_instalacion_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_formacion_instalacion_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+        field_estadoinstalacion_value:
+          id: field_estadoinstalacion_value
+          table: node__field_estadoinstalacion
+          field: field_estadoinstalacion_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: All
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Estado Instalación'
+            description: ''
+            use_operator: true
+            operator: field_estadoinstalacion_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_estadoinstalacion_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
       sorts:
         created:
           id: created
@@ -378,6 +458,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
@@ -405,6 +486,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
