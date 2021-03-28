@@ -1,0 +1,27 @@
+uuid: 603d0791-8610-4a39-ad55-b25bc0b3492b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.teste
+  module:
+    - text
+id: node.teste.body
+field_name: body
+entity_type: node
+bundle: teste
+label: Body
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    summary: ''
+    value: "<h2>Contenido teste&nbsp;</h2>\r\n<img alt=\"enTicConfio\" data-align=\"center\" data-entity-type=\"file\" data-entity-uuid=\"7e6519f1-0697-45fa-a450-8879a337b8dc\" src=\"/sites/default/files/inline-images/enTicConfio.png\" />\r\n<p>&nbsp;</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

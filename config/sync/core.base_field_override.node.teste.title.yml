@@ -1,0 +1,18 @@
+uuid: 19f9aa7b-9cc2-493c-ab8a-d33bfcf4f9ae
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.teste
+id: node.teste.title
+field_name: title
+entity_type: node
+bundle: teste
+label: Teste
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

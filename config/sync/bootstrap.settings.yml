@@ -13,9 +13,9 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: ''
+  path: 'public://LogoMini.png'
   url: ''
-  use_default: true
+  use_default: false
 table_responsive: '-1'
 cdn_theme: cosmo
 cdn_cache_ttl_versions: '604800'
