@@ -33,22 +33,23 @@ Before setting up the VM on your local, you'll need to install Docksal on your m
     ```
     $ fin hosts add
     ```
-    
+
+
 Agregar la clave ssh https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04-es 
 $ fin ssh-key add ${id_rsa}
 
+
 Install basic site using this command.
+
 
 Importar Base de datos descomprimir archivo y cambiar el nombre a "mapas.sql"
 Desde la carpeta raiz:. 
     ```
     $ fin db import dumps/mapas.sql
     ```
-2. Setup VM.
-Before setting up the VM on your local, you'll need to install Docksal on your machine. Visit [Docksal Installation Page](https://docksal.io/installation) for more info. Also, consider visiting [The Official Documentation Site](https://docs.docksal.io/).
+
     ```
-    $ fin vm start (only if you're using VirtualBox)
-    ```
+    
  
  $ fin drush si -Borrar tablas y restablece la base de datos
 Log into your site with drush. Access the site and do necessary work at http://local.mintic-mapas.com/ mas lo que se genera con el sigueinte comando desde/user
