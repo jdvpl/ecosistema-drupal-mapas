@@ -1,8 +1,9 @@
 # ecosistema-drupal-mapas
 
 #detener el servidor de apache
-  sudo /etc/init.d/apache2 stop
-
+```
+ sudo /etc/init.d/apache2 stop
+```
 *Borrar el archivo composer.lock en docroot
 
 
